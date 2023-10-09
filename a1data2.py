@@ -1,5 +1,6 @@
 # From Zhenyang Ding
 
+# import data
 import pandas as pd
 import numpy as np
 
@@ -16,7 +17,9 @@ y = adult.data.targets
 # print(adult.metadata) 
   
 # variable information 
-print(adult.variables)
+# print(adult.variables)
+
+#type(adult.data.features) shows data type 
 
 # print(X.head())
 # print(y)
@@ -29,11 +32,16 @@ print(adult.variables)
 #Look at https://realpython.com/python-data-cleaning-numpy-pandas/
 # look at https://www.shanelynn.ie/using-pandas-dataframe-creating-editing-viewing-data-in-python/
 
-# import data
+
 # make data into numpy
 # one hot encode cat vars
-# note missing data in report
+
+
 # remove missing data
+print(adult.variables)
+X_cleaned = X.dropna()
+print(X_cleaned)
+
 # note malformed data in report
 # remove malformed data
 # compute basic stats
